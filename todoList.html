@@ -27,8 +27,11 @@
         displayTodos();
       }
 
-      // It should have a way to delete todos.
-      todos.splice(0, 1);
+      // It should have a function to delete todos.
+      function deleteTodo(position) {
+        todos.splice(position, 1);
+        displayTodos();
+      }
     </script>
   </body>
 </html>
