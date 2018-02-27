@@ -8,13 +8,11 @@
   <body>
     <script>
       var todoList = {
-        todos: ['item 1', 'item 2', 'item 3']
+        todos: ['item 1', 'item 2', 'item 3'],
+        displayTodos: function () {
+          console.log('My todos:', todoList.todos);
+        }
       };
-
-      // It should have a function to display todos.
-      function displayTodos() {
-        console.log('My todos:', todos);
-      }
 
       // It should have a function to add todos.
       function addTodo(todo) {
