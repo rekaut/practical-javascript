@@ -8,12 +8,15 @@
   <body>
     <script>
       var todoList = {
-        todos: ['item 1', 'item 2', 'item 3'],
+        todos: [],
         displayTodos: function () {
           console.log('My todos:', todoList.todos);
         },
-        addTodo: function (todo) {
-          todoList.todos.push(todo);
+        addTodo: function (initialTodoText) {
+          todoList.todos.push({
+            todoText: initialTodoText,
+            completed: false
+          });
           todoList.displayTodos();
         },
         editTodo: function (position, newValue) {
