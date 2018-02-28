@@ -11,14 +11,12 @@
         todos: ['item 1', 'item 2', 'item 3'],
         displayTodos: function () {
           console.log('My todos:', todoList.todos);
+        },
+        addTodo: function (todo) {
+          todoList.todos.push(todo);
+          todoList.displayTodos();
         }
       };
-
-      // It should have a function to add todos.
-      function addTodo(todo) {
-        todos.push(todo);
-        displayTodos();
-      }
 
       // It should have a function to edit todos.
       function editTodo(position, newValue) {
