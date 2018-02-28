@@ -15,14 +15,12 @@
         addTodo: function (todo) {
           todoList.todos.push(todo);
           todoList.displayTodos();
+        },
+        editTodo: function (position, newValue) {
+          todoList.todos[position] = newValue;
+          todoList.displayTodos();
         }
       };
-
-      // It should have a function to edit todos.
-      function editTodo(position, newValue) {
-        todos[position] = newValue;
-        displayTodos();
-      }
 
       // It should have a function to delete todos.
       function deleteTodo(position) {
