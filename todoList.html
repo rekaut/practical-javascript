@@ -19,14 +19,12 @@
         editTodo: function (position, newValue) {
           todoList.todos[position] = newValue;
           todoList.displayTodos();
+        },
+        deleteTodo: function (position) {
+          todoList.todos.splice(position, 1);
+          todoList.displayTodos();
         }
       };
-
-      // It should have a function to delete todos.
-      function deleteTodo(position) {
-        todos.splice(position, 1);
-        displayTodos();
-      }
     </script>
   </body>
 </html>
