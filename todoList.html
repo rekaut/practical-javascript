@@ -10,7 +10,11 @@
       var todoList = {
         todos: [],
         displayTodos: function () {
-          console.log('My todos:', todoList.todos);
+          console.log('My todos:');
+
+          for (var i = 0; i < todoList.todos.length; i++) {
+            console.log(todoList.todos[i].todoText);
+          }
         },
         addTodo: function (initialTodoText) {
           todoList.todos.push({
