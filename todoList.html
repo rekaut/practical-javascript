@@ -19,8 +19,8 @@
           });
           todoList.displayTodos();
         },
-        editTodo: function (position, newValue) {
-          todoList.todos[position] = newValue;
+        editTodo: function (position, newTodoText) {
+          todoList.todos[position].todoText = newTodoText;
           todoList.displayTodos();
         },
         deleteTodo: function (position) {
