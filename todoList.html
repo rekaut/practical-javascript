@@ -26,6 +26,10 @@
         deleteTodo: function (position) {
           todoList.todos.splice(position, 1);
           todoList.displayTodos();
+        },
+        toggleOne: function (position) {
+          todoList.todos[position].completed = !todoList.todos[position].completed;
+          todoList.displayTodos();
         }
       };
     </script>
