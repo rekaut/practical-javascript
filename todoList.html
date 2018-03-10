@@ -15,6 +15,8 @@
     <input id='editTodoTextInput'>
     <button id='deleteTodoButton'>Delete Todo</button>
     <input id='deleteTodoPositionInput'>
+    <button id='toggleOneButton'>Toggle One</button>
+    <input id='toggleOnePositionInput'>
 
     <script>
       var todoList = {
@@ -115,6 +117,14 @@
       deleteTodoButton.addEventListener('click', function () {
         todoList.deleteTodo(deleteTodoPositionInput.value);
         deleteTodoPositionInput.value = '';
+      });
+
+      var toggleOneButton = document.getElementById('toggleOneButton');
+      var toggleOnePositionInput = document.getElementById('toggleOnePositionInput');
+
+      toggleOneButton.addEventListener('click', function () {
+        todoList.toggleOne(toggleOnePositionInput.value);
+        toggleOnePositionInput.value = '';
       });
     </script>
   </body>
