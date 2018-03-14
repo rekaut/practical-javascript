@@ -130,6 +130,15 @@
         toggleOnePositionInput.value = '';
         todoList.displayTodosToScreen();
       });
+
+      var todosUl = document.querySelector('ul');
+
+      todosUl.addEventListener('click', function (event) {
+        if (event.target.tagName === 'BUTTON') {
+          todoList.deleteTodo(event.target.id);
+          todoList.displayTodosToScreen();
+        }
+      });
     </script>
   </body>
 </html>
