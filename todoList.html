@@ -74,6 +74,11 @@
               todoList.todos[i].completed = true;
             }
           }
+        },
+        createDeleteTodoButton: function () {
+          var deleteTodoButton = document.createElement('button');
+          deleteTodoButton.textContent = 'Delete';
+          return deleteTodoButton;
         }
       };
 
