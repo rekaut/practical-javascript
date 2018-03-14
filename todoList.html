@@ -35,7 +35,7 @@
               todoLi.textContent = '( ) ' + todoList.todos[i].todoText;
             }
 
-            var deleteTodoButton = todoList.createDeleteTodoButton();
+            var deleteTodoButton = todoList.createDeleteTodoButton(i);
             todoLi.appendChild(deleteTodoButton);
 
             todosUl.appendChild(todoLi);
@@ -78,9 +78,10 @@
             }
           }
         },
-        createDeleteTodoButton: function () {
+        createDeleteTodoButton: function (position) {
           var deleteTodoButton = document.createElement('button');
           deleteTodoButton.textContent = 'Delete';
+          deleteTodoButton.id = position;
           return deleteTodoButton;
         }
       };
