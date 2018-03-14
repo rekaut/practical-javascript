@@ -35,6 +35,9 @@
               todoLi.textContent = '( ) ' + todoList.todos[i].todoText;
             }
 
+            var deleteTodoButton = todoList.createDeleteTodoButton();
+            todoLi.appendChild(deleteTodoButton);
+
             todosUl.appendChild(todoLi);
           }
         },
