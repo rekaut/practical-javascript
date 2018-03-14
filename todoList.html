@@ -12,8 +12,6 @@
     <button id='editTodoButton'>Edit Todo</button>
     <input id='editTodoPositionInput'>
     <input id='editTodoTextInput'>
-    <button id='deleteTodoButton'>Delete Todo</button>
-    <input id='deleteTodoPositionInput'>
     <button id='toggleOneButton'>Toggle One</button>
     <input id='toggleOnePositionInput'>
 
@@ -110,15 +108,6 @@
         todoList.editTodo(editTodoPositionInput.value, editTodoTextInput.value);
         editTodoPositionInput.value = '';
         editTodoTextInput.value = '';
-        todoList.displayTodosToScreen();
-      });
-
-      var deleteTodoButton = document.getElementById('deleteTodoButton');
-      var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
-
-      deleteTodoButton.addEventListener('click', function () {
-        todoList.deleteTodo(deleteTodoPositionInput.value);
-        deleteTodoPositionInput.value = '';
         todoList.displayTodosToScreen();
       });
 
