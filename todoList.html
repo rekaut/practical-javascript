@@ -12,8 +12,6 @@
     <button id='editTodoButton'>Edit Todo</button>
     <input id='editTodoPositionInput'>
     <input id='editTodoTextInput'>
-    <button id='toggleOneButton'>Toggle One</button>
-    <input id='toggleOnePositionInput'>
 
     <ul></ul>
 
@@ -32,6 +30,9 @@
             } else {
               todoLi.textContent = '( ) ' + todoList.todos[i].todoText;
             }
+
+            var toggleOneButton = todoList.createToggleOneButton(i);
+            todoLi.appendChild(toggleOneButton);
 
             var deleteTodoButton = todoList.createDeleteTodoButton(i);
             todoLi.appendChild(deleteTodoButton);
@@ -114,15 +115,6 @@
         todoList.editTodo(editTodoPositionInput.value, editTodoTextInput.value);
         editTodoPositionInput.value = '';
         editTodoTextInput.value = '';
-        todoList.displayTodosToScreen();
-      });
-
-      var toggleOneButton = document.getElementById('toggleOneButton');
-      var toggleOnePositionInput = document.getElementById('toggleOnePositionInput');
-
-      toggleOneButton.addEventListener('click', function () {
-        todoList.toggleOne(toggleOnePositionInput.value);
-        toggleOnePositionInput.value = '';
         todoList.displayTodosToScreen();
       });
 
