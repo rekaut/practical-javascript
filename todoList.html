@@ -81,6 +81,12 @@
           deleteTodoButton.textContent = 'Delete';
           deleteTodoButton.id = position;
           return deleteTodoButton;
+        },
+        createToggleOneButton: function (position) {
+          var toggleOneButton = document.createElement('button');
+          toggleOneButton.textContent = 'Toggle';
+          toggleOneButton.id = 'toggleOne-' + position;
+          return toggleOneButton;
         }
       };
 
