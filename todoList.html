@@ -125,6 +125,12 @@
           todoList.toggleOne(event.target.id.split('-')[1]);
           todoList.displayTodosToScreen();
         }
+
+        if (event.target.id.includes('editTodo')) {
+          var newTodoText = prompt('Edit');
+          todoList.editTodo(event.target.id.split('-')[1], newTodoText);
+          todoList.displayTodosToScreen();
+        }
       });
     </script>
   </body>
