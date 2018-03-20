@@ -80,7 +80,7 @@
         createDeleteTodoButton: function (position) {
           var deleteTodoButton = document.createElement('button');
           deleteTodoButton.textContent = 'Delete';
-          deleteTodoButton.id = position;
+          deleteTodoButton.id = 'deleteTodo-' + position;
           return deleteTodoButton;
         },
         createToggleOneButton: function (position) {
@@ -121,8 +121,8 @@
       var todosUl = document.querySelector('ul');
 
       todosUl.addEventListener('click', function (event) {
-        if (event.target.tagName === 'BUTTON') {
-          todoList.deleteTodo(event.target.id);
+        if (event.target.id.includes('deleteTodo')) {
+          todoList.deleteTodo(event.target.id.split('-')[1]);
           todoList.displayTodosToScreen();
         }
       });
