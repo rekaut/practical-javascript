@@ -10,6 +10,9 @@
     <button id='toggleAllButton'>Toggle All</button>
     <button id='addTodoButton'>Add Todo</button>
     <input id='addTodoInput'>
+    <button id='editTodoButton'>Edit Todo</button>
+    <input id='editTodoPositionInput'>
+    <input id='editTodoTextInput'>
 
     <script>
       var todoList = {
@@ -92,6 +95,16 @@
       addTodoButton.addEventListener('click', function () {
         todoList.addTodo(addTodoInput.value);
         addTodoInput.value = '';
+      });
+
+      var editTodoButton = document.getElementById('editTodoButton');
+      var editTodoPositionInput = document.getElementById('editTodoPositionInput');
+      var editTodoTextInput = document.getElementById('editTodoTextInput');
+
+      editTodoButton.addEventListener('click', function () {
+        todoList.editTodo(editTodoPositionInput.value, editTodoTextInput.value);
+        editTodoPositionInput.value = '';
+        editTodoTextInput.value = '';
       });
     </script>
   </body>
