@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    <button>Display Todos</button>
+    <button id='displayTodosButton'>Display Todos</button>
     <button>Toggle All</button>
 
     <script>
@@ -71,6 +71,12 @@
           todoList.displayTodos();
         }
       };
+
+      var displayTodosButton = document.getElementById('displayTodosButton');
+
+      displayTodosButton.addEventListener('click', function () {
+        todoList.displayTodos();
+      });
     </script>
   </body>
 </html>
