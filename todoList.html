@@ -13,6 +13,8 @@
     <button id='editTodoButton'>Edit Todo</button>
     <input id='editTodoPositionInput'>
     <input id='editTodoTextInput'>
+    <button id='deleteTodoButton'>Delete Todo</button>
+    <input id='deleteTodoPositionInput'>
 
     <script>
       var todoList = {
@@ -105,6 +107,14 @@
         todoList.editTodo(editTodoPositionInput.value, editTodoTextInput.value);
         editTodoPositionInput.value = '';
         editTodoTextInput.value = '';
+      });
+
+      var deleteTodoButton = document.getElementById('deleteTodoButton');
+      var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+
+      deleteTodoButton.addEventListener('click', function () {
+        todoList.deleteTodo(deleteTodoPositionInput.value);
+        deleteTodoPositionInput.value = '';
       });
     </script>
   </body>
